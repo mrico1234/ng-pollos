@@ -1,17 +1,22 @@
-<!-- <div fxLayout="column" fxFlexFill class="container" >
+<!-- <div fxLayout="row" fxFlexFill class="container" >
   <div [fxFlex]="20" class="header" >Header</div>
   <div [fxFlex]="65" class="content">Content</div>
   <div [fxFlex]="15" class="footer">Footer</div>
-</div> -->
+</div>  -->
 
-<!-- fxLayout="column" fxFlexFill -->
-<div fxLayout="row" fxFlexFill>
-    <div [fxFlex]="30" style="background-color: lawngreen">cantidad</div>
-    <div [fxFlex]="70" style="background-color: red">?????</div>
-</div>  
-<div fxLayout="column" fxFlexFill>
-    <div [fxFlex]="50" style="background-color: blue;">Tabla de ventas registros</div>  
-    <div [fxFlex]="10" style="background-color: brown;">Precio</div>  
-    <div [fxFlex]="10" style="background-color: greenyellow">Pago</div>  
-</div> 
+<div class="container" >
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div [fxFlex]="30" class="item-1">Etiquetas</div>
+    <div [fxFlex]="70" class="item-2">Entradas</div>
+  </div>
+
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutGap.xs="0" >
+    <div></div>
+    <div [fxFlex]="70"  class="item-3">Tabla de ventas registros</div>  
+    <div [fxFlex]="5"  class="item-4">Precio</div>  
+    <div [fxFlex]="25"  class="item-5">Pago</div>  
+  </div>
+
   
+  
+</div>
