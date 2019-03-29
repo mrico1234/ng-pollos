@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
