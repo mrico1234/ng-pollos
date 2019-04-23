@@ -1,0 +1,70 @@
+<div class="text-center">
+  <h2><strong class="text-muted">Vender pollo</strong></h2>
+</div>
+
+<div class="container shadow">
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label bg-dark text-white">Cantidad pollos</label>
+      <div class="col-sm-2">
+        <input [(ngModel)]="body.amount" name="amount" 
+          type="text" class="form-control" placeholder="Cantidad"> 
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label bg-dark text-white">Cliente</label>
+      <div class="col-sm-4">
+        <input [(ngModel)]="body.client" name="client"
+          type="text" class="form-control" placeholder="Cliente">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label bg-secondary text-white">Peso (lb)</label>
+      <div class="col-sm-2">
+        <input [(ngModel)]="body.size" name="size"
+          type="text" class="form-control" placeholder="Peso">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label bg-secondary text-white">Precio unitario</label>
+      <div class="col-sm-2">
+        <input [(ngModel)]="body.price" name="price"
+          type="text" class="form-control" placeholder="Precio unitario">
+      </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label bg-secondary text-white">Precio Total</label>
+      <div class="col-sm-2">
+        <input [(ngModel)]="body.total" name="total"
+          type="text" class="form-control" placeholder="Precio total">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label bg-secondary text-white">Tipo de pago</label>
+      <div class="col-sm-2">
+        <input [(ngModel)]="body.pago" name="pago"
+          type="text" class="form-control" placeholder="Tipo de pago">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2 offset-sm-5">
+        <button [disabled]="!forma.valid" 
+          type="submit" class="btn btn-primary">Vender</button>
+      </div>
+    </div>
+
+  </form>
+  
+</div> 

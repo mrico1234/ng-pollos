@@ -1,23 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MainModule } from './main/main.module';
+
+// ROUTES
+import { APP_ROUTING } from './app.routes';
+
+// SERVICES
+import { VentasService } from './services/ventas.service';
+
+// COMPONENTS
+import { AppComponent } from './app.component';
+import { ComponentModule } from './components/components.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    APP_ROUTING,
     FlexLayoutModule,
-    MainModule
+    HttpClientModule,
+    ComponentModule
   ],
-  providers: [],
+  providers: [
+    VentasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

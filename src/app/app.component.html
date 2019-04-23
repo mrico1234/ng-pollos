@@ -1,32 +1,28 @@
-<!-- <div fxLayout="row" fxFlexFill class="container" >
+<!-- <div fxLayout="row" fxFlexFillclass="container" >
   <div [fxFlex]="20" class="header" >Header</div>
-  <div [fxFlex]="65" class="content">Content</div>
+  
   <div [fxFlex]="15" class="footer">Footer</div>
-</div>  -->
+</di  v>  -->
 
-<div class="container" fxLayout="column">
-  
-  <app-header style="background-color: orange;" 
-    fxLayout="row" 
-    fxFlex="10"></app-header>
-  
+<div class="Margenes" fxLayout="column">
 
-  <app-label style="background-color: brown; text-align: center;"
-    fxLayout="row" 
-    fxFlex="15" 
-    fxLayoutGap="10px" 
-    fxLayoutGap.xs="0"></app-label>
+  <app-header 
+    fxLayout="row"
+    fxFlex.xs="10" 
+    fxFlex="10">
+  </app-header>
   
-  <div fxLayout="column" fxLayoutGap="10px" fxLayoutGap.xs="0" fxFlex="75">
-    <div></div>
-    <div fxFlex="65"  class="item-3">Tabla de ventas registros</div>  
-    <div fxFlex="35"  class="item-5">
-      <div>Precio</div>
-      <div>Pago</div> 
-    </div>  
+  <div class="main-container" fxFlex="80">
+    <router-outlet></router-outlet>
   </div>
 
-</div><!-- container -->
+  <app-footer class="footer" 
+    fxLayout.gt-md ="column"  
+    fxFlex.xs="10" 
+    fxFlex="10">
+  </app-footer>
+    
+</div>
 
 
 

@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { RouterModule } from '@angular/router';
+
 import { HeaderComponent } from './header/header.component';
-import { LabelComponent } from './label/label.component';
-import { InputComponent } from './input/input.component';
-import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [HeaderComponent, LabelComponent, InputComponent, BodyComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule
   ],
   exports: [
+    // Los compoenentes en shared si se exportan, son los unicos q lo hacen.
     HeaderComponent,
-    LabelComponent,
-    InputComponent,
-    BodyComponent,
     FooterComponent
   ]
 })
-export class MainModule { }
+export class SharedModule { }

@@ -1,0 +1,41 @@
+<h2 class="text-center">Ventas</h2>
+<br>
+<div class="container animated fadeIn fast">
+  <table class="table">
+
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">N° pollos</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Peso (Lb)</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Precio total</th>
+        <th scope="col">Pago</th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let venta of ventas; let i = index">
+        <td> {{venta.amount}} </td>
+        <td> {{venta.client}} </td>
+        <td> {{venta.size}} </td>
+        <td> {{venta.price}} </td>
+        <td> {{venta.total}} </td>
+        <td> {{venta.pago}} </td>
+        <td> <button (click)="verVenta(i)" type="button" class="btn btn-outline-primary btn-sm " >
+          Abrir
+        </button> </td>
+        <td> <button type="button" class="btn btn-outline-danger btn-sm" >
+          Eliminar
+        </button> </td>
+        <td> <button type="button" class="btn btn-outline-info btn-sm" >
+            Modificar
+          </button> </td>
+      </tr>
+    </tbody>
+    
+  </table>
+</div>

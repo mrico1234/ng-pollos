@@ -1,34 +1,11 @@
-.container{
+.Margenes{
 		/* border: 1px solid red; */
 		display: grid;
 		min-height: 100%;
-    height: 100%;
+		height: 100%;
+		min-width: 100%;
+		width: 100;
 }
-.header{
-	background-color: green;
-}
-
-.content{    
-	background-color: blue;
-}
-
-.footer{    
-	background-color: crimson;
-} 
-
-/* ------------------------------------------------------------------------------------------------------------ */    
-.item-1{
-  background-color: red;
-}
-.item-2{
-	background-color: purple;
-}
-.item-3{
-	background-color: blue;
-}
-.item-4{
-	background-color: yellow;
-}
-.item-5{
-	background-color: coral;
+.main-container{
+  margin-top: 20px;
 }
