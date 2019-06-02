@@ -9,8 +9,9 @@ import { map, tap } from 'rxjs/operators';
 @Injectable()
 export class VentasService {
 
-  //url: string = 'http://localhost:3000/sales';
   url: string = 'https://surtipollos.herokuapp.com/sales';
+  saleUrl: string = 'https://surtipollos.herokuapp.com/sales';
+
 
 
   constructor( private http: HttpClient ) {
@@ -34,26 +35,26 @@ export class VentasService {
       }));
   }
 
+  // putSale( sale: any, keys$: string ): Observable<any> {
+  //   let body  = JSON.stringify( sale );
+  //   let headers = new HttpHeaders({
+  //     'Content-Type': 'application/json'
+  //   });
+
+  //   // const url = `${ this.putUrl }/${ keys$ }.json`;
+  //   const url = `${ this.putUrl }/${ keys$ }.json`;
+
+  //   return this.http.put( url, body, { headers } )
+  //     .pipe(map( (res: any) => {
+  //       console.log( res );
+  //       return res ;
+  //     }));
+  // }
+
+  borrarSale(id: string): Observable<any> {
+    const url = `${this.saleUrl}/${id}`;
+    return this.http.delete( url )
+      .pipe(tap(res => res ));
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// this.http.get('http://localhost:3000/sales.json')
-//     .subscribe( ( resp: any[] ) => {
-//       return this.vent = resp;
-//       console.log( resp );
-//     });

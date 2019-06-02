@@ -34,22 +34,3 @@ export class VentasComponent {
   }
 
 }
-
-
-/* this.http.get('http://localhost:3000/sales.json')
-      .subscribe( ( resp: any ) => {
-        this.ventas = resp;
-        console.log( resp );
-      }); */
-
-
-// addType(name: string): Observable<IType> {
-//   let body = JSON.stringify({ name });
-//   let headers = new Headers({ 'Content-Type': 'application/json'});
-  // let options = new RequestOptions({ headers: headers });
-
-//   return this.http.post('http://localhost:3000/sales', body, options)
-//     .map(this.handleResponse)
-//   .catch(this.handleError);
-// }
-// 
